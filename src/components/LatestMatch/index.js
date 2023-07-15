@@ -1,24 +1,20 @@
-// Write your code here
 import './index.css'
 
-import {Component} from 'react'
+const LatestMatch = props => {
+  const {latestMatchData} = props
+  const {
+    competingTeam,
+    date,
+    venue,
+    result,
+    competingTeamLogo,
+    firstInnings,
+    secondInnings,
+    manOfTheMatch,
+    umpires,
+  } = latestMatchData
 
-class LatestMatch extends Component  {
-    render(){
-        const {latestDetails} = this.props
-        const {
-            competingTeam,
-            date,
-            venue,
-            result,
-            competingTeamLogo,
-            firstInnings,
-            secondInnings,
-            manOfTheMatch,
-            umpires,
-        } = latestDetails
-    
-    return (
+  return (
     <div className="latest-match-container">
       <h1 className="latest-match-heading">Latest Matches</h1>
       <div className="latest-match-card">
@@ -37,22 +33,14 @@ class LatestMatch extends Component  {
         </div>
         <hr className="separator" />
         <div className="latest-match-details-2">
-          <div className="match-info-team">
-              <p className="latest-match-details-label">First Innings</p>
-              <p className="latest-match-details-value">{firstInnings}</p>
-          </div>
-          <div className="match-info-team">
-              <p className="latest-match-details-label">Second Innings</p>
-              <p className="latest-match-details-value">{secondInnings}</p>
-          </div>
-          <div className="match-info-team">
-              <p className="latest-match-details-label">Man Of The Match</p>
-              <p className="latest-match-details-value">{manOfTheMatch}</p>
-          </div>
-          <div className="match-info-team">
-              <p className="latest-match-details-label">Umpires</p>
-              <p className="latest-match-details-value">{umpires}</p>
-          </div>
+          <p className="latest-match-details-label">First Innings</p>
+          <p className="latest-match-details-value">{firstInnings}</p>
+          <p className="latest-match-details-label">Second Innings</p>
+          <p className="latest-match-details-value">{secondInnings}</p>
+          <p className="latest-match-details-label">Man Of The Match</p>
+          <p className="latest-match-details-value">{manOfTheMatch}</p>
+          <p className="latest-match-details-label">Umpires</p>
+          <p className="latest-match-details-value">{umpires}</p>
         </div>
       </div>
     </div>
